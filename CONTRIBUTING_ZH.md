@@ -23,9 +23,11 @@
 cases/
 └── 2026-03-njupt-winter-battle/    ← 你的比赛文件夹
     └── 你的团队名-项目简称/         ← 新建文件夹（从 template/ 复制）
-        ├── README.md
+        ├── README.md               ← 英文文档（必须提交）
+        ├── README_ZH.md            ← 中文文档（必须提交）
         ├── requirements.txt
-        └── main.ipynb
+        ├── main.ipynb              ← 英文 notebook（必须提交）
+        └── main_zh.ipynb           ← 中文 notebook（必须提交）
 ```
 
 **文件夹命名规则：**
@@ -36,9 +38,12 @@ cases/
 > **关于获奖前缀**：请勿自行添加 `01-gold-`、`02-silver-`、`03-bronze-` 等前缀。
 > 比赛结果公布后，由主办方统一重命名。
 
-### 3. 填写 README.md
+### 3. 填写 README.md 和 README_ZH.md
 
-使用 `template/README.md` 中的模板，**所有标注 `<!-- required -->` 的字段必须填写**。请用**英文**填写。
+两份文档均为必须提交：
+
+- **`README.md`** — 英文版本。使用 `template/README.md` 中的模板，**所有标注 `<!-- required -->` 的字段必须填写**，请用**英文**填写。
+- **`README_ZH.md`** — 中文版本。使用 `template/README_ZH.md` 中的模板，**所有标注 `<!-- 必填 -->` 的字段必须填写**，请用**中文**填写。
 
 ### 4. 填写依赖列表
 
@@ -50,11 +55,11 @@ cases/
 
 ### 5. 在 aup-learning-cloud 中测试
 
-提交前请完成以下验证：
+提交前请完成以下验证（**两个 notebook 都要测试**）：
 
 1. 打开 aup-learning-cloud → 选择 **Basic GPU Environment**
-2. 从头到尾运行 `main.ipynb` 的所有 Cell
-3. 确认无报错
+2. 从头到尾运行 `main.ipynb`（英文版）的所有 Cell，确认无报错
+3. 从头到尾运行 `main_zh.ipynb`（中文版）的所有 Cell，确认无报错
 
 ### 6. 提交 Pull Request
 

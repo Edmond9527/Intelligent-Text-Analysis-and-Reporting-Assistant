@@ -23,9 +23,11 @@ Copy the `template/` directory into the correct activity folder:
 cases/
 └── 2026-03-njupt-winter-battle/    ← your competition's folder
     └── yourteamname-projectslug/   ← your new folder (copy of template/)
-        ├── README.md
+        ├── README.md               ← English documentation (required)
+        ├── README_ZH.md            ← Chinese documentation (required)
         ├── requirements.txt
-        └── main.ipynb
+        ├── main.ipynb              ← English notebook (required)
+        └── main_zh.ipynb           ← Chinese notebook (required)
 ```
 
 **Folder naming rules:**
@@ -36,9 +38,12 @@ cases/
 > **Note on awards:** Do NOT add award prefixes (`01-gold-`, `02-silver-`, `03-bronze-`) yourself.
 > The organizer will rename folders after competition results are announced.
 
-### 3. Fill in your README.md
+### 3. Fill in your README.md and README_ZH.md
 
-Use the template in `template/README.md`. All fields marked `<!-- required -->` must be completed. Write in **English**.
+Both documentation files are required:
+
+- **`README.md`** — English version. Use the template in `template/README.md`. All fields marked `<!-- required -->` must be completed. Write in **English**.
+- **`README_ZH.md`** — Chinese version. Use the template in `template/README_ZH.md`. All fields marked `<!-- 必填 -->` must be completed. Write in **Chinese**.
 
 ### 4. List your dependencies
 
@@ -50,11 +55,11 @@ Leave the file empty (but present) if you have no extra dependencies.
 
 ### 5. Test in aup-learning-cloud
 
-Before submitting, verify your notebook runs end-to-end:
+Before submitting, verify **both** notebooks run end-to-end:
 
 1. Open aup-learning-cloud → select **Basic GPU Environment**
-2. Run all cells in `main.ipynb` from top to bottom
-3. Confirm there are no errors
+2. Run all cells in `main.ipynb` (English) from top to bottom — confirm no errors
+3. Run all cells in `main_zh.ipynb` (Chinese) from top to bottom — confirm no errors
 
 ### 6. Submit a Pull Request
 

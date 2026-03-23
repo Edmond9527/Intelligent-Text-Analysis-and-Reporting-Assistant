@@ -2,6 +2,8 @@
 
 <!-- Replace this line with your actual project title -->
 
+[中文版本](./README_ZH.md)
+
 ## Project Overview <!-- required -->
 
 <!-- 1–3 sentences describing what your project does and what problem it solves -->
