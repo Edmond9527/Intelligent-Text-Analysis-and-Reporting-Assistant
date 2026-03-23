@@ -2,19 +2,19 @@
 
 [中文说明](./README_ZH.md)
 
-## Overview
+## Project Overview
 
 Coldrain's ColdCode is an interactive **Notebook-based coding assistant** designed for the **JupyterLab Web environment**. The project focuses on six common developer tasks: **code explanation, error debugging, minimal repair, code refactoring, scaffold/test generation, and AMD ROCm environment diagnosis**.
 
 Rather than training a new model, the system builds on existing LLM capabilities and packages them into a practical coding workflow using **prompt engineering, long-context handling, file operations, output extraction, caching, and fallback strategies**. The final submission version runs as a **single `.ipynb` file**, without requiring an external source directory.
 
-## Event Information
+## Activity Information
 
 - **Competition / Workshop:** 2026 NJUPT Winter Battle - AMD ROCm
 - **Team Members:** Yeziheng, Guan Shuwen, Dai Ruiyi
 - **Award:** Third Prize
 
-## Runtime Environment
+## Environment
 
 - **Execution Platform:** AMD-provided remote JupyterLab Web environment
 - **Recommended Base Image:** Basic GPU Environment (aup-learning-cloud)
