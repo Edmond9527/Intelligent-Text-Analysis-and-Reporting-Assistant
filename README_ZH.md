@@ -6,7 +6,6 @@
 [![ROCm](https://img.shields.io/badge/ROCm-FF6B35?style=flat-square&logo=amd&logoColor=white)](https://rocm.docs.amd.com)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org)
 [![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)](https://jupyter.org)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-欢迎-brightgreen?style=flat-square)](./CONTRIBUTING_ZH.md)
 
 </div>
