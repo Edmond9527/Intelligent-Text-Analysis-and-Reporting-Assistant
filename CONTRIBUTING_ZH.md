@@ -17,26 +17,38 @@
 
 ### 2. 创建你的作品文件夹
 
-将 `template/` 目录复制到对应的比赛文件夹下：
+将 `template/` 目录复制到对应的比赛文件夹下。本仓库最终（获奖公布后）的完整目录结构如下：
 
 ```
 cases/
-└── 2026-03-njupt-winter-battle/    ← 你的比赛文件夹
-    └── 你的团队名-项目简称/         ← 新建文件夹（从 template/ 复制）
-        ├── README.md               ← 英文文档（必须提交）
-        ├── README_ZH.md            ← 中文文档（必须提交）
+└── 2026-03-njupt-winter-battle/         ← 活动文件夹
+    ├── README.md                         ← 活动简介 + 获奖名单
+    ├── 01-gold-teamalpha-llmchat/        ← 一等奖（主办方重命名）
+    ├── 02-silver-teambeta-cvdetect/      ← 二等奖（主办方重命名）
+    ├── 03-bronze-teamgamma-robot/        ← 三等奖（主办方重命名）
+    └── teamdelta-nlpchat/                ← 普通提交（无前缀）
+        ├── README.md                     ← 英文文档（必须提交）
+        ├── README_ZH.md                  ← 中文文档（必须提交）
         ├── requirements.txt
-        ├── main.ipynb              ← 英文 notebook（必须提交）
-        └── main_zh.ipynb           ← 中文 notebook（必须提交）
+        ├── main.ipynb                    ← 英文 notebook（必须提交）
+        ├── main_zh.ipynb                 ← 中文 notebook（必须提交）
+        └── assets/                       ← 截图、动图（可选）
 ```
 
-**文件夹命名规则：**
-- 格式：`团队名-项目简称`（如 `teamalpha-llmchat`）
-- 只用小写字母、数字、连字符，不用空格或特殊字符
-- 简洁有描述性
+**根据你的比赛结果命名文件夹：**
 
-> **关于获奖前缀**：请勿自行添加 `01-gold-`、`02-silver-`、`03-bronze-` 等前缀。
-> 比赛结果公布后，由主办方统一重命名。
+| 结果 | 文件夹命名格式 | 示例 |
+|------|--------------|------|
+| 一等奖（金奖） | `01-gold-团队名-项目简称` | `01-gold-teamalpha-llmchat` |
+| 二等奖（银奖） | `02-silver-团队名-项目简称` | `02-silver-teambeta-cvdetect` |
+| 三等奖（铜奖） | `03-bronze-团队名-项目简称` | `03-bronze-teamgamma-robot` |
+| 未获奖 / 工作坊 | `团队名-项目简称` | `teamdelta-nlpchat` |
+
+> **不是比赛提交？** 直接用无前缀的 `团队名-项目简称` 格式即可，和未获奖格式相同。
+
+**命名规则：**
+- 只用小写字母、数字、连字符，不用空格或特殊字符
+- 简洁有描述性（如 `teamalpha-llmchat`、`smith-image-caption`）
 
 ### 3. 填写 README.md 和 README_ZH.md
 
@@ -107,19 +119,6 @@ ffmpeg -ss 00:00:05 -t 20 -i demo.mp4 \
 提交内容总大小请控制在 **100MB 以内**。
 
 大型数据集或模型权重请使用外链（如 Hugging Face、Google Drive），并在 README 中注明。
-
-## 获奖标记说明
-
-比赛结果公布后，主办方将对获奖作品文件夹重命名：
-
-| 奖项 | 前缀 | 示例 |
-|------|------|------|
-| 一等奖（金奖） | `01-gold-` | `01-gold-teamalpha-llmchat` |
-| 二等奖（银奖） | `02-silver-` | `02-silver-teambeta-cvdetect` |
-| 三等奖（铜奖） | `03-bronze-` | `03-bronze-teamgamma-robot` |
-| 无奖项 | _(无前缀)_ | `teamdelta-nlpchat` |
-
-提交时无需在文件夹名中包含获奖前缀，主办方在比赛结束后统一处理。
 
 ## 有问题？
 

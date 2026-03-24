@@ -17,26 +17,38 @@ Click **Fork** (top-right of this page) to create your own copy.
 
 ### 2. Create your project folder
 
-Copy the `template/` directory into the correct activity folder:
+Copy the `template/` directory into the correct activity folder. The final structure in this repo (after awards are announced) looks like this:
 
 ```
 cases/
-└── 2026-03-njupt-winter-battle/    ← your competition's folder
-    └── yourteamname-projectslug/   ← your new folder (copy of template/)
-        ├── README.md               ← English documentation (required)
-        ├── README_ZH.md            ← Chinese documentation (required)
+└── 2026-03-njupt-winter-battle/         ← activity folder
+    ├── README.md                         ← activity overview & award list
+    ├── 01-gold-teamalpha-llmchat/        ← 1st place (renamed by organizer)
+    ├── 02-silver-teambeta-cvdetect/      ← 2nd place (renamed by organizer)
+    ├── 03-bronze-teamgamma-robot/        ← 3rd place (renamed by organizer)
+    └── teamdelta-nlpchat/                ← general submission (no prefix)
+        ├── README.md                     ← English documentation (required)
+        ├── README_ZH.md                  ← Chinese documentation (required)
         ├── requirements.txt
-        ├── main.ipynb              ← English notebook (required)
-        └── main_zh.ipynb           ← Chinese notebook (required)
+        ├── main.ipynb                    ← English notebook (required)
+        ├── main_zh.ipynb                 ← Chinese notebook (required)
+        └── assets/                       ← screenshots, GIFs (optional)
 ```
 
-**Folder naming rules:**
-- Format: `teamname-projectslug` (e.g. `teamalpha-llmchat`)
-- Lowercase letters, numbers, hyphens only — no spaces or special characters
-- Keep it short and descriptive
+**Name your folder according to your result:**
 
-> **Note on awards:** Do NOT add award prefixes (`01-gold-`, `02-silver-`, `03-bronze-`) yourself.
-> The organizer will rename folders after competition results are announced.
+| Result | Folder name format | Example |
+|--------|--------------------|---------|
+| 1st place (Gold) | `01-gold-teamname-projectslug` | `01-gold-teamalpha-llmchat` |
+| 2nd place (Silver) | `02-silver-teamname-projectslug` | `02-silver-teambeta-cvdetect` |
+| 3rd place (Bronze) | `03-bronze-teamname-projectslug` | `03-bronze-teamgamma-robot` |
+| No award / workshop | `teamname-projectslug` | `teamdelta-nlpchat` |
+
+> **Not submitting for a competition?** Just use `teamname-projectslug` with no prefix — same as the no-award format above.
+
+**Naming rules:**
+- Lowercase letters, numbers, hyphens only — no spaces or special characters
+- Keep it short and descriptive (e.g. `teamalpha-llmchat`, `smith-image-caption`)
 
 ### 3. Fill in your README.md and README_ZH.md
 
@@ -107,19 +119,6 @@ Before submitting, verify **both** notebooks run end-to-end:
 Keep your submission under **100MB** total.
 
 For large datasets or model weights, use an external link (Hugging Face, Google Drive, etc.) and reference it in your README.
-
-## Award Markers
-
-After results are announced, the organizer will rename winning submissions:
-
-| Award | Folder prefix | Example |
-|-------|--------------|---------|
-| 1st place (Gold) | `01-gold-` | `01-gold-teamalpha-llmchat` |
-| 2nd place (Silver) | `02-silver-` | `02-silver-teambeta-cvdetect` |
-| 3rd place (Bronze) | `03-bronze-` | `03-bronze-teamgamma-robot` |
-| No award | _(no prefix)_ | `teamdelta-nlpchat` |
-
-You do not need to include this in your folder name when submitting — the organizer handles this after the competition.
 
 ## Questions?
 
