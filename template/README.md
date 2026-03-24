@@ -30,12 +30,12 @@ This project is an intelligent assistant system designed for data processing and
 
 ## Technical Highlights
 
-* **Prompt Engineering Evolution:** The prompt design went through four iterations, transitioning from simple zero-shot instructions to introducing System Roles and strict formatting constraints. It further utilized Few-shot prompting to anchor sentiment scoring scales and Chain-of-Thought (CoT) reasoning to overcome complex logical deduction tasks.
-* **Context Window Management:** To address the 32k token limit and Out-Of-Memory (OOM) exceptions caused by extremely long texts, the system implements a task-driven asymmetrical context dimensionality reduction strategy. This includes cascaded summary generation and an adaptive context window allocation algorithm.
-* **Cluster Resource and API Lifecycle Management:** Designed a comprehensive API lifecycle management mechanism, including input validity checks, timeout control, exception catching, retry strategies, and rate-limiting handling. The system employs a linear backoff strategy to retry during server rate limits or transient network anomalies, effectively avoiding "retry storms".
-* **Heterogeneous Data Parsing & Robust Pipeline:** Achieved polymorphic data normalization by converting various underlying buffer structures (like `memoryview`) into immutable byte streams. It also features a pre-execution circuit breaker mechanism based on the observer pattern, utilizing lightweight probes to pre-scan file headers and content validity to isolate abnormal inputs without breaking the entire batch pipeline.
-* **Asynchronous Concurrency and I/O Masking:** Adopts an asynchronous concurrent architecture based on `ThreadPoolExecutor`. It distributes the three independent subtasks (summarization, sentiment analysis, and keyword extraction) in parallel. This effectively masks network I/O wait times and significantly boosts pipeline throughput without increasing GPU memory load.
-* **I/O Architecture Optimization and Frontend:** To overcome the single-transfer rate bottleneck of WebSockets in the Jupyter environment (IOPub data rate exceeded), the system implements a dual-modal I/O architecture and adds a server-side file system direct-read module. The frontend GUI is built with native `ipywidgets`, achieving an embedded interactive interface without requiring extra port mapping.
+* [cite_start]**Prompt Engineering:** Utilized System Roles, Few-shot prompting, and Chain-of-Thought (CoT) to ensure stable formatting and complex logical deduction[cite: 52, 58, 93].
+* [cite_start]**Context Window Management:** Implemented cascaded summary generation and an adaptive allocation algorithm to prevent Out-Of-Memory (OOM) errors with long texts[cite: 121, 123, 147].
+* [cite_start]**API Lifecycle Management:** Designed robust error handling with a linear backoff retry strategy to mitigate server rate limits and avoid "retry storms"[cite: 249, 251, 253].
+* [cite_start]**Robust Data Parsing:** Normalized polymorphic data streams and added a pre-execution circuit breaker to isolate corrupted files without crashing the pipeline[cite: 262, 265].
+* [cite_start]**Asynchronous Concurrency:** Used `ThreadPoolExecutor` to parallelize subtasks, masking network I/O latency and significantly boosting throughput[cite: 272, 273].
+* [cite_start]**I/O Optimization & Frontend:** Bypassed Jupyter WebSocket limits with a dual-modal I/O (including server-side direct read) and built an embedded GUI using native `ipywidgets`[cite: 281, 283, 288].
 ## Results / Demo
 
 * **Real-time File Dashboard:** Provides a real-time monitor for file parsing status, extracted character count, and estimated Token consumption, including smart alerts for exceeding text limits.
