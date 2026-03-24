@@ -51,7 +51,7 @@
 
   ## Results / Demo
 
-  ![N1BGsyde_converted](.\image\N1BGsyde_converted.gif)
+    ![](image/N1BGsyde_converted.gif)
 
   1. **Story Input & Continuation**
       ![](./image/213617.png)
